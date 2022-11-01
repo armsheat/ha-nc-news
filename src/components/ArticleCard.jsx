@@ -4,7 +4,7 @@ function ArticleCard({ article }) {
     const { title, topic, created_at, body, id} = article
 
     return (
-        <div className='article-card' key={id}>
+        <div className='article-card' >
             <li>
                 <h3 id='articleTitle'>{title}</h3>       
                 <h4 className="topicAndDate">

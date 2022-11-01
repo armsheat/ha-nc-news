@@ -4,7 +4,7 @@ function ArticleGrid({ newArticles }) {
     return (
       <ul className='article-grid' >
         {newArticles.map((article) => {
-          return <ArticleCard article={article} />;
+          return <ArticleCard article={article} key={article.id}/>;
         })}
       </ul>
     );
