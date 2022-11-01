@@ -2,9 +2,9 @@ import ArticleCard from './ArticleCard'
 
 function ArticleGrid({ newArticles }) {
     return (
-      <ul className='article-grid'>
+      <ul className='article-grid' >
         {newArticles.map((article) => {
-          return <ArticleCard key={article.id} article={article} />;
+          return <ArticleCard article={article} />;
         })}
       </ul>
     );
