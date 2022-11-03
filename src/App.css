@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Playfair Display', serif;
+  
 }
 
 h1  {
@@ -19,9 +20,18 @@ ul {
     list-style: none;
   }
 
+.sidebar {
+  width: 20%;
+  height: 80%;
+  border: solid;
+  border-color: blueviolet;
+  padding: 10px;
+  padding-right: 0%;
+}
+
 .topBanner  {
     width: 100%;
-    padding:60px 0;
+    padding:6px 0;
     text-align: center;
     background: #c2e9e9;
     color: white;
@@ -57,6 +67,12 @@ ul {
     place-content: end;
 }
 
+#writtenBy {
+  padding-top: 1%;
+  text-align: right;
+  place-content: end;
+}
+
 .article-card {   
     height: 170px;
     padding: 10px 20px;
@@ -65,4 +81,13 @@ ul {
     width: 60%;
     background-color: white;    
   }
+
+.topicTitle {
+  text-align: center;
+  font-size: 2em;
+  padding: 10px 0;
+  font-weight: 800;
+  color: rgb(92, 89, 89);
+  text-transform: capitalize;
+}
 
