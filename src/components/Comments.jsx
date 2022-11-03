@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
 
-function Comments({articleID}) {
+function Comments({articleID, comments, setComments}) {
     
     const [isLoading, setIsLoading] = useState(true);
-    const [comments, setComments] = useState([])
 
     useEffect(() => {
         setIsLoading(true)
@@ -13,7 +12,7 @@ function Comments({articleID}) {
             setComments(comments)
             setIsLoading(false)
         })
-    }, [])
+    }, [setComments])
 
     if (isLoading) return <p>Loading...</p>
 
