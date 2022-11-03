@@ -119,3 +119,20 @@ ul {
 .articlePage {
   display: flex;
 }
+
+#heartIcon {
+  max-width: 20px;
+  height: auto;
+}
+
+button {
+  background-color: rgb(78, 168, 77);
+  border-radius: 5px;
+  color: white;
+  padding: 2px;
+}
+
+button:disabled {
+  background-color: aliceblue;
+  color: aliceblue;
+}
