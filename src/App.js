@@ -4,6 +4,8 @@ import { Routes, Route} from "react-router-dom"
 import SearchManager from './components/SearchManager';
 import TopicPage from './components/TopicPage';
 import { useState } from "react"
+import ArticlePage from './components/ArticlePage';
+
 
 
 function App() {
@@ -15,7 +17,8 @@ function App() {
       <TopBanner/>
       <Routes>
         <Route path='/' element = {<SearchManager setURL={setURL} URLQuery={URLQuery}/>}/>
-        <Route path='/articles/:slug' element={<TopicPage setURL={setURL} URLQuery={URLQuery}/>}/>
+        <Route path='/topics/:slug' element={<TopicPage setURL={setURL} URLQuery={URLQuery}/>}/>
+        <Route path='/articles/:articleID' element={<ArticlePage/>}/>
       </Routes>
     </div>
   );

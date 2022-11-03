@@ -15,8 +15,7 @@ function SearchManager(props) {
         setIsLoading(true)
         fetch(URLQuery)
         .then((res) => res.json())
-        .then(({articles}) => {
-     
+        .then(({articles}) => {   
           setArticles(articles);
           setIsLoading(false)
         });
@@ -25,7 +24,7 @@ function SearchManager(props) {
 
     if (isLoading) return <p>Loading...</p>
 
-    return (<div>
+    return (<div className="articlePage">
           <TopicSideBar setURL={setURL}/>
         <div className='container'>
           <ArticleGrid newArticles={newArticles}/>
