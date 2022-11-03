@@ -121,11 +121,6 @@ ul {
   display: flex;
 }
 
-#heartIcon {
-  max-width: 20px;
-  height: auto;
-}
-
 button {
   background-color: rgb(78, 168, 77);
   border-radius: 5px;
@@ -148,4 +143,13 @@ button:disabled {
   margin-right: 10%;
   margin-left: 10%;
   margin-top: 2%;
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 50vh;
+  margin-top: 5%;
+}
+
+.details {
+  text-align: right;
 }

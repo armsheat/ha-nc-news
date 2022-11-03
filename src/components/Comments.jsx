@@ -21,10 +21,12 @@ function Comments({articleID}) {
         <ul className="allComments">
             {comments.map(({votes, author, body, created_at, comment_id}) => {
                 return <li key={comment_id} className='individualComment'>
-                    <h3>{body}</h3>
+                    <h3 id='commentText'>{body}</h3>
+                    <div  className="details">
                     <h4>written by {author}</h4>
                     <h4>{created_at.substring(0,10)}</h4>
                     <h4>Votes: {votes}</h4>
+                    </div>
                 </li>
             })}
         </ul>
