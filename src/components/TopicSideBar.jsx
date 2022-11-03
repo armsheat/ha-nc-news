@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {Link } from "react-router-dom";
 
-function TopicSideBar(props) {
+function TopicSideBar() {
 
 const [AllTopics, setAllTopics] = useState([]);
 
@@ -19,7 +19,7 @@ useEffect(() => {
             <h3>Topics</h3>
                 <ul className="TopicList">
                     {AllTopics.map(({ slug }) => {
-                         return (<Link to={`/articles/${slug}`} key={ slug }><li>
+                         return (<Link to={`/topics/${slug}`} key={ slug }><li>
                             <h4>{ slug }</h4>
                          </li>
                         </Link>)
