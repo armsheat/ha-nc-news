@@ -107,6 +107,7 @@ ul {
 }
 
 #articleBody {
+  font-size: 16px;
   margin-right: 10%;
   margin-left: 10%;
   margin-top: 2%;
@@ -135,4 +136,16 @@ button {
 button:disabled {
   background-color: aliceblue;
   color: aliceblue;
+}
+
+.individualComment {
+  border: solid;
+  border-color: black
+}
+
+.allComments {
+  background-color: white;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 2%;
 }

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import TopicSideBar from './TopicSideBar';
+import Comments from './Comments';
 
 
 function ArticlePage() {
@@ -46,6 +47,7 @@ function ArticlePage() {
     const { title, topic, created_at, author, body, votes } = newArticle
 
     return (
+        <> 
         <div className='articlePage'>
         <TopicSideBar/>
         <div className='articleMain'>
@@ -55,8 +57,11 @@ function ArticlePage() {
                 <h4 id='writtenBy'>Written by: {author}</h4>
             <p id='articleBody'>{body}</p>
                 <p className='topicAndDate'> <button onClick={ handleVoteClick} disabled={hasVoted? true : false}  >vote</button>   votes: {numOfVotes}</p>
+                <Comments articleID={articleID}/>
         </div>
         </div>
+      
+        </>
     )
 }
 
