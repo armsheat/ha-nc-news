@@ -49,7 +49,7 @@ function ArticlePage() {
     const { title, topic, created_at, author, body, votes } = newArticle
 
     return (
-        <> 
+        
         <div className='articlePage'>
         <TopicSideBar/>
         <div className='articleMain'>
@@ -62,9 +62,7 @@ function ArticlePage() {
                 <Comments articleID={articleID} comments={comments} setComments={setComments}/>
                 <CommentForm articleID={articleID} comments={comments} setComments={setComments}/>
         </div>
-        </div>
-      
-        </>
+        </div>       
     )
 }
 
