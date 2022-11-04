@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
-function Comments({articleID}) {
+function Comments({articleID, comments, setComments}) {
     
     const [isLoading, setIsLoading] = useState(true);
-    const [comments, setComments] = useState([])
+
 
     useEffect(() => {
         setIsLoading(true)
@@ -21,7 +21,7 @@ function Comments({articleID}) {
         <ul className="allComments">
             {comments.map(({votes, author, body, created_at, comment_id}) => {
                 return <li key={comment_id} className='individualComment'>
-                    <h3 id='commentText'>{body}</h3>
+                    <h4 id='commentText'>{body}</h4>
                     <div  className="details">
                     <h4>written by {author}</h4>
                     <h4>{created_at.substring(0,10)}</h4>
