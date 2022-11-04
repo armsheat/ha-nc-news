@@ -13,7 +13,7 @@ function ArticlePage() {
     const [numOfVotes, setNumOfVotes] = useState(0)
     const [hasVoted, setHasVoted] = useState(false)
     const [comments, setComments] = useState([])
-    const [comment, setComment] = useState('')
+
 
     useEffect(() => {
         setIsLoading(true)
@@ -59,8 +59,8 @@ function ArticlePage() {
                 <h4 id='writtenBy'>Written by: {author}</h4>
             <p id='articleBody'>{body}</p>
                 <p className='topicAndDate'> <button onClick={ handleVoteClick} disabled={hasVoted? true : false}  >vote</button>   votes: {numOfVotes}</p>
-                <Comments articleID={articleID} comments={comments} setComments={setComments} comment={comment} setComment={setComment}/>
-                <CommentForm articleID={articleID} comments={comments} setComments={setComments} comment={comment} setComment={setComment}/>
+                <Comments articleID={articleID} comments={comments} setComments={setComments} />
+                <CommentForm articleID={articleID} comments={comments} setComments={setComments}/>
         </div>
         </div>
       

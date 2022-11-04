@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-function CommentForm({comments, setComments, articleID, comment, setComment}) {
+function CommentForm({ setComments, articleID}) {
 
     const [user, setUser] = useState('')
     const [validUsers, setValidUsers] = useState([])
     const [message, setMessage] = useState('')
+    const [comment, setComment] = useState('')
 
     useEffect(() => {
     fetch(`https://heathers-news.herokuapp.com/api/users`)
@@ -22,12 +23,7 @@ function CommentForm({comments, setComments, articleID, comment, setComment}) {
         if(!validUsers.includes(user)) {
             event.preventDefault()
             setMessage('Please input a valid username')    
-        }
-        if (comment.length > 0) {
-            event.preventDefault()
-            setMessage('Your message cannot be empty')
-        }
-        
+        }       
         if (comment.length > 0 && validUsers.includes(user)) {
             event.preventDefault()
             setComment('')
