@@ -77,8 +77,8 @@ ul {
 }
 
 .article-card {   
-    height: 170px;
-    padding: 10px 20px;
+    height: 200px;
+    padding: 10px 10px;
     margin: 10px;
     border: 1px solid black;
     width: 60%;
@@ -152,4 +152,19 @@ button:disabled {
 
 .details {
   text-align: right;
+}
+
+#newComment {
+  height: 50px;
+  width:60%
+}
+
+#username {
+  width: 58%;
+}
+
+form {
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
 }
