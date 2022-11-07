@@ -25,13 +25,15 @@ function SearchManager(props) {
 
     if (isLoading) return <p>Loading...</p>
 
-    return (<div className="articlePage">
-          <SortingForm setURL={setURL} URLQuery={URLQuery}/>
+    return (<>
+          <SortingForm setURL={setURL} URLQuery={URLQuery} className='sortComponent'/>
+          <div className="articlePage">
           <TopicSideBar setURL={setURL}/>
         <div className='container'>
           <ArticleGrid newArticles={newArticles}/>
         </div>
         </div>
+        </>
     )
 }
 

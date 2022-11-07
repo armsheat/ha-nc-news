@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Playfair Display', serif;
+   
   
 }
 
@@ -14,6 +15,14 @@ h1  {
     padding: 10px 0;
     font-weight: 800;
     color: rgb(92, 89, 89);
+  }
+
+.sortComponent {
+    background: #cde8e8;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50%;
+    padding-right: 10%;
   }
   
 ul {
@@ -168,3 +177,4 @@ form {
   justify-content: center;
   padding-left: 10%;
 }
+
